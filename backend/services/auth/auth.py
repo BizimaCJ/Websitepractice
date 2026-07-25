@@ -6,7 +6,7 @@ from flask_bcrypt import Bcrypt
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
-from config import SECRET_KEY, SCHOOL_EMAIL_DOMAIN, UPLOAD_FOLDER, ALLOWED_DOCUMENT_EXTENSIONS, ADMIN_KEY
+from config import SECRET_KEY, SCHOOL_EMAIL_DOMAIN, UPLOAD_FOLDER, ALLOWED_DOCUMENT_EXTENSIONS, ADMIN_KEY, PORT
 import db_client
 from db_client import DBServiceError
 
@@ -209,4 +209,5 @@ def review_verification(user_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, use_reloader=False)
+    app.run(debug=True, port=PORT, use_reloader=False)
+
